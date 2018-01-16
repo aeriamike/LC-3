@@ -1,0 +1,19 @@
+0011 0000 0000 0000 ; Program starts at x3000
+0001 000 000 1 00000  ; r0 <- 0   initialize r0
+0001 010 010 1 00000  ; r2 <- 0   initialize r2
+
+0010 000 0 0000 0110 ; Let r0 be loaded with content from address x3008 (ASCII 'Z')
+0010 010 0 0000 0110 ; Let r2 be loaded with content from address x3009 (count)
+
+1111 000 000100001 ; Output 'Z' using Trap x21
+0001 010 010 1 11111 ;  R2: count - 1 after putting out Z in console
+
+0001 010 010 1 00000  ; r2 <- 0  make sure the r2 is to tested above the condition code
+0000 001 1 1111 1100 ; The condition code loops back to the output code until r2 is ran out of count.
+
+1111 0000 0010 0101 ; Halts Program
+0000 0000 0101 1010 ; ASCII code for 'Z'
+0000 0000 0110 0100 ; Binary Code for the length count 100
+
+
+

@@ -1,0 +1,28 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	ACCESSA                 30DF
+//	BIGGEST                 30AD
+//	COLUMNS                 3004
+//	COMPARE                 30D8
+//	END1                    30DE
+//	ENDLOOP                 3044
+//	FUNCTION                3046
+//	IFE                     3095
+//	IFN                     3057
+//	IFS                     307D
+//	IFW                     306A
+//	LOOP1                   300B
+//	LOOP2                   304F
+//	LOOP3                   30E4
+//	LOOP5                   3015
+//	MATRIX                  3005
+//	PUSHA                   30CC
+//	ROWS                    3003
+//	RSTACK                  3002
+//	SKIP1                   30E7
+//	SKIP2                   30B4
+//	SKIP3                   30BC
+//	SKIP4                   30C4
+//	SKIP5                   302E
+//	SKIP6                   3040
+//	START                   3006

@@ -1,0 +1,31 @@
+.ORIG x3000 
+
+	LEA R1,HELLO 
+AGAIN 	LDR R2,R1,#0 
+	BRz NEXT 
+	ADD R1,R1,#1 
+	BR AGAIN
+
+NEXT 	LEA R0,PROMPT 
+	TRAP x22 ; PUTS 
+	LD R3, NEGENTER
+
+AGAIN2 	TRAP x20 ; GETC 
+	TRAP x21 ; OUT 
+	ADD R2,R0,R3 
+	BRz CONT 
+	STR R0, R1, #0
+	ADD R1, R1, #1
+	BR AGAIN2
+
+CONT 	AND R2,R2,#0
+	STR R2, R2, #0
+	LEA R0, HELLO
+	TRAP x22
+	TRAP x25
+
+NEGENTER .FILL xFFF6
+PROMPT .stringz "Please enter your name: "
+HELLO  .stringz "Hello, "
+.BLKW #25
+.end

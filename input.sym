@@ -1,0 +1,18 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	DDR                     301F
+//	DSR                     301E
+//	KBDR                    3021
+//	KBSR                    3020
+//	L1                      3004
+//	L2                      300A
+//	L3                      3012
+//	L4                      3015
+//	input                   300F
+//	loop                    3008
+//	newline                 3022
+//	prompt                  3023
+//	saver1                  301B
+//	saver2                  301C
+//	saver3                  301D
+//	start                   3000

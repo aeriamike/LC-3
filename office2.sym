@@ -1,0 +1,20 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	Compa                   3047
+//	Input                   305B
+//	NONE                    3088
+//	NOT_IN                  3011
+//	Print                   3030
+//	Quest                   306A
+//	Stage1                  3051
+//	Stage2                  3053
+//	Stage3                  3056
+//	Stage4                  3058
+//	Start                   301B
+//	Start_In                3000
+//	decision                3029
+//	finalEND                302F
+//	lisDirect               3091
+//	not_again               3012
+//	store_char              3007
+//	try_l                   3023

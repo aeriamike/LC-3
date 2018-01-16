@@ -1,0 +1,20 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	BEGIN_7                 3010
+//	BEGIN_8                 3006
+//	COUNT                   3026
+//	DELAY                   3020
+//	DSR                     3037
+//	EIGHT                   300D
+//	REP                     3022
+//	SETUP                   3000
+//	SEVEN                   301B
+//	STOP                    301F
+//	SaveR1                  3027
+//	check_hash              302F
+//	check_star              3028
+//	interlo                 303A
+//	interrupt               3038
+//	key_stat                3039
+//	origin                  3036
+//	space                   303B

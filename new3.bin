@@ -1,0 +1,64 @@
+0011 0000 0000 0000 ; start at x3000
+
+0010 110 0 0010 0001  ; r6 <- "N"
+0010 011 0 0010 0001  ; r3 <- "Y"
+
+0101 001 001 1 00000  ; r1 <- 0   count "1"
+
+0101 010 010 1 00000  ; r2 <- 0 
+0010 010 011111011    ; r2 <- x3100
+0001 010 010 1 00000  ; r2 <- r2 + 0
+
+0000 001 000000100	; check if r1 > 0 (skips if the bit is positive)
+0000 010 000001101	; check if r1 = 0
+
+; if the leading bit is negative
+0001 001 001 1 00001 	; r1 <- r1 + 1
+0001 010 010 1 00000    ; r2 <- r2 + 0
+0000 100 000001000	; is r2 negative?
+
+; if the leading bit is positive
+0001 001 001 1 00000	; r1 <- r1 + 0 
+0000 010 000000110      ; is r1 zero?
+
+0101 100 100 1 00000  ; r4 <- 0    initialize r4
+0001 100 100 1 11101  ; r4 <- -3   set r4 as a consecutive tester
+0101 101 101 1 00000  ; r5 <- 0    result
+0001 101 100 0 00 001 ; r5 <- r4 + r1
+0000 011 000000011    ; if r5 is positive or zero, get out of there. (found three consecutive 1's)
+
+0101 001 001 1 00000    ; r1<-0
+
+; landing point
+
+0001 010 010 0 00 010   ; r2<-r2 + r2
+
+;0000 010 000000001	; check if r1 = 0
+
+0000 111 111110001	; loop back
+
+;outside
+0001 010 010 1 00000    ; r2 <- r2 + 0
+
+0000 010 000000001     	; r2 is 0 when exit
+
+0011 011 011101001      ; x3101 <- r3 result YES 
+
+
+0000 101 000000111	; r2 is not 0 when exit
+
+0101 111 111 1 00000  ; r7 <- 0    initialize r7
+0001 111 111 1 11101  ; r7 <- -3   set r7 as a consecutive tester
+0001 001 001 0 00111  ; r1 <- r7 + r1   result
+
+0000 011 000000001    ; is r1 positive or zero
+0011 110 011100011    ; x3101 <- r6 result NO
+0001 001 001 1 00000  ; r1 <- r1 + 0
+0000 100 000000001    ; is r1 negative
+0011 011 011100000    ; x3101 <- r3 result YES
+
+
+
+;0100 1110 N 4E
+;0101 1001 Y 59
+
